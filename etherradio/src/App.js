@@ -7,8 +7,7 @@ import AlbumArt from './AlbumArt'
 import './style.css';
 import albumCover from "./media/vultures.png";
 //import AudioPlayer from './AudioPlayer/AudioPlayer'
-import AudioPlayer from './AudioPlayer/AudioPlayer';
-//import icon from './logo512.png';
+import AudioPlayer from './AudioPlayer';
 
 
 function App() {
