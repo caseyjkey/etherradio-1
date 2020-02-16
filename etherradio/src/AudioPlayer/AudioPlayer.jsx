@@ -1,66 +1,82 @@
-import React from 'react';
-import JPlayer, {
-  initializeOptions, Gui, SeekBar, BufferBar,
-  Poster, Audio, Title, FullScreen, Mute, Play, PlayBar, Repeat,
-  VolumeBar, Duration, CurrentTime, Download, BrowserUnsupported,
-} from 'react-jplayer';
+import React, { useState, useEffect } from 'react';
 import { FaPlay } from 'react-icons/fa';
 
 import Vultures from '../media/Vultures.wav';
 import Olympics from '../media/insomniac_olympics.flac';
 
-const defaultOptions = {
-  id: 'AudioPlayer',
-  keyEnabled: true,
-  verticalVolume: true,
-  media: {
+
+
+
+
+export default function AudioPlayer() {
+
+const [song, setSong] = useState(media[0]);
+
+
+let media = [
+  {
     title: 'Insomniac Olympics',
     artist: 'Blockhead',
     sources: {
       m4a: Olympics,
-      oga: 'http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg',
     },
     free: true,
   },
-};
+  {
+    title: 'Vultures',
+    artist: 'Pervsydell',
+    sources: {
+      m4a: Vultures
+    },
+    free: true,
+  }
+];
 
-initializeOptions(defaultOptions);
+return (
+  <div id="player">
+      <audio ref={ref => this.player = ref} />
 
-const AudioPlayer = () => (
-  <JPlayer id={defaultOptions.id} className="jp-sleek">
-    <Audio />
-    <Gui>
-      <div className="jp-controls jp-icon-controls">
-        <Play><i className="fa">{/* Icon set in css */}</i></Play>
-        <Repeat><i className="fa fa-repeat" /></Repeat>
-        <div className="jp-progress">
-          <SeekBar>
-            <BufferBar />
-            <PlayBar />
-            <CurrentTime />
-            <Duration />
-          </SeekBar>
-        </div>
-        <div className="jp-volume-container">
-          <Mute>
-            <i className="fa">{/* Icon set in css */}</i>
-          </Mute>
-          <div className="jp-volume-slider">
-            <div className="jp-volume-bar-container">
-              <VolumeBar />
-            </div>
-          </div>
-        </div>
-        <FullScreen><i className="fa fa-expand" /></FullScreen>
-        <Download><i className="fa fa-download" /></Download>
-        <div className="jp-title-container">
-          <Poster />
-          <Title />
-        </div>
+			<div id="jp_container_1" className="jp-audio">
+			<div className="jp-type-single">
+
+				<div className="jp-title">
+				  <ul>
+					<li>{song.title}</li>
+					<li>{song.artist}</li>
+				  </ul>
+				</div>
+
+				<div className="jp-gui jp-interface">
+
+					<ul className="jp-controls">
+					  <li><button className="jp-play" tabindex="1"><FaPlay /></button></li>
+					  <li><button className="jp-pause" tabindex="1"><i className="fas fa-pause"></i></button></li>
+					  <li><button className="jp-mute" tabindex="1" title="mute"><i className="fas fa-volume-mute"></i></button></li>
+					  <li><button className="jp-unmute" tabindex="1" title="unmute"><i className="fas fa-volume-up"></i></button></li>
+					</ul>
+
+					<div className="jp-progress">
+					  <div className="jp-seek-bar">
+						<div className="jp-play-bar"></div>
+					  </div>
+					</div>
+
+					<div className="jp-time-holder">
+					  <div className="jp-current-time"></div>
+					</div>
+
+					<div className="jp-volume-bar">
+					  <div className="jp-volume-bar-value"></div>
+					</div>
+
+					<div className="jp-no-solution">
+					  <span>Update Required</span>
+					  To play the media you need to update your browser to a recent version..
+					</div>
+				</div>
+			</div>
+			</div>
       </div>
-      <BrowserUnsupported />
-    </Gui>
-  </JPlayer>
 );
 
 export default AudioPlayer;
