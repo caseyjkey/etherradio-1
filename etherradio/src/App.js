@@ -3,10 +3,20 @@ import Background from './Background'
 import AlbumArt from './AlbumArt'
 import './style.css';
 import albumCover from "./media/vultures.png";
+import Vultures from './media/Vultures.mp3';
 import AudioPlayer from './AudioPlayer'
 import { FaCode } from 'react-icons/fa'
 
 function App() {
+  let media = {
+      title: 'Vultures',
+      artist: 'Pervsydell',
+      sources: {
+        m4a: Vultures,
+      },
+      free: true,
+    };
+
   return (
     <div className="App">
       <header>
@@ -15,7 +25,7 @@ function App() {
       </header>
       <Background />
       <AlbumArt image={albumCover} />
-      <AudioPlayer />
+      <AudioPlayer media={media}/>
     </div>
   );
 }

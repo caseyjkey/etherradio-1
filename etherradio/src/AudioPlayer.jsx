@@ -5,7 +5,6 @@ import JPlayer, {
   VolumeBar, Duration, CurrentTime, Download, BrowserUnsupported,
 } from 'react-jplayer';
 
-import Vultures from './media/Vultures.wav';
 
 
 
@@ -15,18 +14,16 @@ export default function AudioPlayer(props) {
     keyEnabled: true,
     verticalVolume: true,
     media: {
-      title: 'Vultures',
-      artist: 'Pervsydell',
+      title: '',
+      artist: '',
       sources: {
-        m4a: Vultures,
       },
       free: true,
     },
   };
 
   if(props.media) {
-    console.log("props", props);
-    defaultOptions = { props };
+    defaultOptions = { ...defaultOptions, ...props };
   }
 
 
