@@ -8,6 +8,7 @@ import './style.css';
 import albumCover from "./media/vultures.png";
 //import AudioPlayer from './AudioPlayer/AudioPlayer'
 import AudioPlayer from './AudioPlayer/AudioPlayer';
+//import icon from './logo512.png';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-          <h1>ETHERRADIO</h1>
+          <img src="./img/ETHERRADIO.svg" alt="Paris" aline = "left" style={{width: 40, height: 40}}></img>
 			    <ul id="links"><li><a href="#" id="exchange">Exchange</a></li></ul>
       </header>
       <Background />

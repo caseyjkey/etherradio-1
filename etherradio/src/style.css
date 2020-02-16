@@ -15,6 +15,7 @@ a {
 	color: white;
 }
 
+/* Header styling */
 header {
 	height: 3em;
 	width: 100%;
@@ -38,6 +39,10 @@ header {
 	src: url("./fonts/diskopia.ttf");
 
 }
+
+/* End of Header Styling */
+
+
 
 .por_portis-container>.por_portis-widget-frame {
 	top: 3.5em;
