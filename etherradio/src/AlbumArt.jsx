@@ -1,24 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // We almost just want this to be passed in a image object or url and then send out an http request to 
 // go retreve and render. In the encap player component. 
-function AlbumArt() {
-    let canvas = document.getElementById("gradient");
-    let img = document.getElementById("cover-art");
-    let center_x, center_y;
+function AlbumArt({ image, width, height }) {
 
+    const [centerX, setCenterX] = useState(window.innerWidth / 2);
+    const [centerY, setCenterY] = useState((window.innerHeight / 2) - 75);
     useEffect(() => {
-        center_x = canvas.width / 2;
-        center_y = (canvas.height / 2) - 75;
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-   
-    }, []);
+        setCenterX(window.innerWidth / 2);
+        setCenterY((window.innerHeight / 2) - 75);
+        console.log(window.innerWidth, window.innerHeight, centerX, centerY)
+    }, [window.innerWidth]);
     
 
-        const { image } = this.props;
+    const styles = {
+        left: centerX - 150,
+        top: centerY - 100
+    };
+
+    console.log(styles);
     return(
-        <img id="cover-art" src={image} alt="album cover art"></img>
-    );
+        <img id="cover-art" src={image} alt="album cover art" style={ styles }></img>
+    )
 }
 
 export default AlbumArt;

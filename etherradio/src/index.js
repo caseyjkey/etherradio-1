@@ -5,8 +5,8 @@ import { createStore, combineReducers } from 'redux';
 import { reducer as jPlayers } from 'react-jplayer';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
+
 import App from './App';
-import AudioPlayer from './AudioPlayer/AudioPlayer';
 import * as serviceWorker from './serviceWorker';
 
 // Styles the jPlayer to look nice
