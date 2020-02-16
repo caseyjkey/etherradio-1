@@ -1,7 +1,7 @@
 import React from 'react';
 import JPlayer, {
   initializeOptions, Gui, SeekBar, BufferBar,
-  Poster, Audio, Title, FullScreen, Mute, Play, PlayBar, Repeat,
+  Poster, Audio, Title, Mute, Play, PlayBar, Repeat,
   VolumeBar, Duration, CurrentTime, Download, BrowserUnsupported,
 } from 'react-jplayer';
 

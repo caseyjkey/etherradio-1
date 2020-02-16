@@ -16,7 +16,6 @@ function AlbumArt({ image, width, height }) {
         top: centerY - 100
     };
 
-    console.log(styles);
     return(
         <img id="cover-art" src={image} alt="album cover art" style={ styles }></img>
     )
