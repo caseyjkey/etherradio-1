@@ -5,7 +5,6 @@ import './style.css';
 import albumCover from "./media/vultures.png";
 import AudioPlayer from './AudioPlayer'
 
-
 function App() {
   return (
     <div className="App">
