@@ -8,8 +8,7 @@ function AlbumArt({ image, width, height }) {
     useEffect(() => {
         setCenterX(window.innerWidth / 2);
         setCenterY((window.innerHeight / 2) - 75);
-        console.log(window.innerWidth, window.innerHeight, centerX, centerY)
-    }, [window.innerWidth]);
+    }, [centerX, centerY]);
     
 
     const styles = {

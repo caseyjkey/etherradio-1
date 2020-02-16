@@ -1,14 +1,9 @@
 {
   "name": "etherradio",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.1",
-    "@material-ui/core": "^4.9.2",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "bootstrap": "^4.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-icons": "^3.9.0",
@@ -16,12 +11,10 @@
     "react-less-watcher": "^1.1.4",
     "react-redux": "^5.0.7",
     "react-scripts": "3.4.0",
-    "reactstrap": "^8.4.1",
     "redux": "^4.0.5"
   },
   "scripts": {
-    "watch-less": "react-less-watcher -d src",
-    "start": "react-scripts start&npm run watch-less",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
