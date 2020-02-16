@@ -7,7 +7,7 @@ import AlbumArt from './AlbumArt'
 import './style.css';
 import albumCover from "./media/vultures.png";
 //import AudioPlayer from './AudioPlayer/AudioPlayer'
-import AudioPlayer from './AudioPlayer';
+import AudioPlayer from './AudioPlayer
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
           <h1>ETHERRADIO</h1>
 			    <ul id="links"><li><a href="#" id="exchange">Exchange</a></li></ul>
       </header>

@@ -10,8 +10,8 @@ import Olympics from './media/insomniac_olympics.flac';
 
 
 
-export default function AudioPlayer() {
-  const defaultOptions = {
+export default function AudioPlayer(props) {
+  let defaultOptions = {
     id: 'AudioPlayer',
     keyEnabled: true,
     verticalVolume: false,
@@ -25,6 +25,11 @@ export default function AudioPlayer() {
       free: true,
     },
   };
+
+  if(props) {
+    defaultOptions = { props };
+  }
+
 
   initializeOptions(defaultOptions);
 
