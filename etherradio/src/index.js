@@ -17,8 +17,6 @@ import 'react-jplayer/dist/css/controls/iconControls.min.css';
 /* Pass the jPlayer reducer and it's initialStates to the store */
 const store = createStore(combineReducers({ jPlayers }));
 
-//const storeProp = Connect(withHandlers(lifecycle(JPlayer)));
-
 ReactDOM.render((
   <Provider store={store}>
     <App />
