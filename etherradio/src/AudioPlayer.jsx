@@ -57,7 +57,6 @@ export default function AudioPlayer(props) {
               </div>
             </div>
           </div>
-          <FullScreen><i className="fa fa-expand" /></FullScreen>
           <Download><i className="fa fa-download" /></Download>
           <div className="jp-title-container">
             <Poster />
