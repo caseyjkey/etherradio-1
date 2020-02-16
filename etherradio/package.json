@@ -1,5 +1,6 @@
 {
   "name": "etherradio",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,8 +14,7 @@
     "redux": "^4.0.5"
   },
   "scripts": {
-    "watch-less": "react-less-watcher -d src",
-    "start": "react-scripts start&npm run watch-less",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

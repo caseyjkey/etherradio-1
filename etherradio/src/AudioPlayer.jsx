@@ -6,7 +6,6 @@ import JPlayer, {
 } from 'react-jplayer';
 
 import Vultures from './media/Vultures.wav';
-import Olympics from './media/insomniac_olympics.flac';
 
 
 
@@ -14,19 +13,19 @@ export default function AudioPlayer(props) {
   let defaultOptions = {
     id: 'AudioPlayer',
     keyEnabled: true,
-    verticalVolume: false,
+    verticalVolume: true,
     media: {
-      title: 'Insomniac Olympics',
-      artist: 'Blockhead',
+      title: 'Vultures',
+      artist: 'Pervsydell',
       sources: {
-        m4a: Olympics,
-        oga: 'http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg',
+        m4a: Vultures,
       },
       free: true,
     },
   };
 
-  if(props) {
+  if(props.media) {
+    console.log("props", props);
     defaultOptions = { props };
   }
 
